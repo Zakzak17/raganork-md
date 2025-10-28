@@ -41,7 +41,7 @@ const sequelize =
         logging: DEBUG,
       });
 
-const SESSION_STRING = process.env.SESSION || process.env.SESSION_ID;
+const SESSION_STRING = process.env.SESSION || process.env.SESSION_ID=RGNK~jAoQ7CPs;
 
 const SESSION = SESSION_STRING
   ? SESSION_STRING.split(",").map((s) => s.split("~")[1].trim())
@@ -124,7 +124,7 @@ const baseConfig = {
   STICKER_DATA: process.env.STICKER_DATA || "Raganork",
   BOT_NAME: process.env.BOT_NAME || "Raganork",
   AUDIO_DATA:
-    process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private"
+    process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "public"
       ? "default"
       : process.env.AUDIO_DATA,
   TAKE_KEY: process.env.TAKE_KEY || "",
@@ -282,3 +282,4 @@ Object.defineProperty(config, "debug", {
 });
 
 module.exports = config;
+
